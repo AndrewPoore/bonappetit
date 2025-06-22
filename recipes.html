@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Andrew Poore">
+    <meta name="description" content="A cooking web application for my Web Design & Development Class.">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Bon Appétit | Recipe Search</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Bon Appétit</h1>
+        </a>
+        <nav>
+            <a href="recipes.html">Recipe Generator</a>
+            <a href="recipe-form.html">Submit a Recipe</a>
+        </nav>
+    </header>
+
+    <main id="sub-main">
+        <div class="main-content">
+            <h2>Recipe Generator</h2>
+            <p>Use this search bar to get recipe ideas!</p>
+            <label><input id="search" placeholder="Beef"></label>
+            <button id="recipe-btn" class="btn">Generate Recipes</button>
+            <div id="cardCtn"></div>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Bon Appétit</h2>
+        <p>Andrew Poore | WDD 330 | <span id="modified"></span></p>
+    </footer>
+</body>
+<!-- <script type="module" src="js/main.js"></script> -->
+<script type="module" src="js/recipeSearch.js"></script>
+
+</html>

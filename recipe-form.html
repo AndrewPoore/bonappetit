@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Andrew Poore">
+    <meta name="description" content="A cooking web application for my Web Design & Development Class.">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Bon Appétit | Recipe Submission</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Bon Appétit</h1>
+        </a>
+        <nav>
+            <a href="recipes.html">Recipe Generator</a>
+            <a href="recipe-form.html">Submit a Recipe</a>
+        </nav>
+    </header>
+
+    <main id="sub-main">
+        <div class="main-content">
+            <h2>Submit a Recipe</h2>
+            <p>Use this form to submit a recipe to our catalog!</p>
+            <formfield>
+                <form id="form">
+                    <div class="form-ctn">
+                        <Label>Title: </Label>
+                        <input name="title" placeholder="Mushroom Risotto" type="text">
+                    </div>
+                    <div class="form-ctn">
+                        <Label>Servings: </Label>
+                        <input name="servings" placeholder="4" type="text">
+                    </div>
+                    <div class="form-ctn">
+                        <Label>Ingredients: </Label>
+                        <input name="ingredients" placeholder="Arborio rice, chicken stock, parmesan cheese..." type="text">
+                    </div>
+                    <div class="form-ctn">
+                        <Label>Instructions: </Label>
+                        <textarea name="instructions"
+                            placeholder="1. Heat pan with olive oil. &#10;2. ..."></textarea>
+                    </div>
+                    <input id="submit-btn" class="btn" type="submit">
+                </form>
+            </formfield>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Bon Appétit</h2>
+        <p>Andrew Poore | WDD 330 | <span id="modified"></span></p>
+    </footer>
+</body>
+<script type="module" src="js/recipeForm.js"></script>
+
+</html>
