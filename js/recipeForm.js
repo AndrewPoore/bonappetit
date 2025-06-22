@@ -3,7 +3,7 @@ import { lastModified, checkLocalStorage, closeMessage } from "./utils.mjs";
 async function postAPI() {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
-    const response = await fetch(`https://spoon-proxy.onrender.com/recipes/analyze/`, {
+    const response = await fetch(`https://spoonacular-proxy.onrender.com/recipes/analyze/`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
