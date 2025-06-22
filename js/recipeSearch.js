@@ -1,7 +1,7 @@
 import { lastModified, checkLocalStorage, closeMessage, startBtnAnimation, endBtnAnimation } from "./utils.mjs";
 
 async function queryFetch(search) {
-    const url = `https://spoon-proxy.onrender.com/recipes/complexSearch/&query=${search}`;
+    const url = `https://spoon-proxy.onrender.com/recipes?query=${encodeURIComponent(search)}`;
     try {
         const response = await fetch(url);
         if (response.ok) {
