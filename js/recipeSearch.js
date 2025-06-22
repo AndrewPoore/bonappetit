@@ -18,8 +18,17 @@ async function queryFetch(search) {
 
 async function buildCards() {
     startBtnAnimation();
+    document.querySelector('#cardCtn').innerHTML = ''; // Clear old cards
+
     var search = document.querySelector('#search').value;
     let array = await queryFetch(search);
+
+    if (!array || array.length === 0) {
+        console.log('No results found');
+        endBtnAnimation();
+        return;
+    }
+
     for (let i = 0; i < array.length; i++) {
         let currentObject = array[i];
         let currentImg = currentObject.image;
@@ -46,8 +55,10 @@ function cardContent(src, text) {
 lastModified();
 checkLocalStorage();
 
-//Recipe Search
-let btn = document.querySelector('#recipe-btn');
-btn.addEventListener('click', buildCards);
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('#recipe-btn');
+    if (btn) btn.addEventListener('click', buildCards);
 
-document.querySelector('.message-btn').addEventListener('click', closeMessage);
+    const msgBtn = document.querySelector('.message-btn');
+    if (msgBtn) msgBtn.addEventListener('click', closeMessage);
+});
